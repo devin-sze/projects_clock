@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Rubik&display=swap");
+@media (prefers-color-scheme: dark) {
+  #bodyBackDark {
+    background-image: linear-gradient(-45deg, #2d3036, #757a85);
+  }
+  #bottom_right {
+    color: #b8b8b8;
+  }
+  #github {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+}
+
+/*variables*/
+/*Font Import*/
+/*Basic Setup*/
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.5;
+  color: black;
+  margin: 0px;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#bodyBack {
+  background-image: linear-gradient(-45deg, #545a66, #cacaca);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+}
+
+#bodyBackDark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.glass {
+  background-clip: padding-box;
+  -webkit-backdrop-filter: blur(1.25px);
+          backdrop-filter: blur(1.25px);
+}
+
+/*Back Button*/
+#graphic_arrow {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background-size: 32px 32px;
+  border: solid white 2px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-image: url("arrow_white.png");
+  border-radius: 50%;
+  -webkit-transition: background-color 0.7s, -webkit-transform 0.2s;
+  transition: background-color 0.7s, -webkit-transform 0.2s;
+  transition: transform 0.2s, background-color 0.7s;
+  transition: transform 0.2s, background-color 0.7s, -webkit-transform 0.2s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+#graphic_arrow:hover {
+  background-color: #faad69;
+  -webkit-transform: translate(-2px, 0px) rotate(90deg);
+          transform: translate(-2px, 0px) rotate(90deg);
+}
+
+#graphic_arrow:active {
+  background-color: #e38b3d;
+  -webkit-transform: translate(-5px, 0px) rotate(90deg);
+          transform: translate(-5px, 0px) rotate(90deg);
+}
+
+#timeWrapper, #otherNums {
+  position: absolute;
+  width: 372px;
+  height: 50px;
+  left: 50%;
+  top: calc(50% - 50px);
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.digit {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px 3px 0px 3px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: 50px;
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #7d8583b7;
+  color: white;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-filter: drop-shadow(5px 5px 2px #f1f1f179);
+          filter: drop-shadow(5px 5px 2px #f1f1f179);
+}
+
+.digit_buffer {
+  width: 18px;
+}
+
+.trans {
+  position: relative;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-filter: drop-shadow(6.5px 6.5px 4px #424750) drop-shadow(-6.5px -6.5px 4px #cacacade);
+          filter: drop-shadow(6.5px 6.5px 4px #424750) drop-shadow(-6.5px -6.5px 4px #cacacade);
+}
+
+#dig {
+  background-color: #8f8f8d;
+  height: 50px;
+  width: 38px;
+  margin: 0px 9px 0px 9px;
+  color: #636363;
+  text-align: center;
+  line-height: 50px;
+  vertical-align: 50px;
+  font-weight: 100;
+}
+
+.top {
+  border-radius: 38px 38px 0px 0px;
+}
+
+.bottom {
+  border-radius: 0px 0px 38px 38px;
+}
+
+#bottom_right {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.bottom_left {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.con_link_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: 40px 40px;
+  background-size: cover;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  float: left;
+}
+
+#github {
+  background-image: url("github.png");
+}
+
+#github:hover {
+  background-color: #94ffe47a;
+}
+
+#github:active {
+  width: 35px;
+  height: 35px;
+  margin: 2.5px;
+  background-color: #7ceed2bd;
+}
+
+#inspo {
+  z-index: 200;
+  position: relative;
+  font-size: 15px;
+  float: left;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #94ffe400;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+#inspo:hover {
+  background-color: #94ffe47a;
+}
+
+#inspo:active {
+  background-color: #73bdaa;
+}
+/*# sourceMappingURL=clock.css.map */
