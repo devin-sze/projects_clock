@@ -6,19 +6,6 @@ var sec;
 var min;
 var hr;
 
-function setStartTime() {
-    return;
-    let d = new Date();
-    sec = d.getSeconds();
-    min = d.getMinutes();
-    hr = d.getHours();
-
-    console.log(d.getMonth());
-}
-
-
-
-
 function doTime() {
     let doTime = setInterval(function() {
         let d = new Date();
@@ -67,7 +54,7 @@ function doTime() {
                 }
             }
         }
-    }, 200);
+    }, 50);
 }
 
 function updateDig(dig, newDig, idDig, idDigit) {
@@ -127,9 +114,7 @@ var months = {
 
 function updateDay(week, day, month, year) {
     let elem = document.getElementById("bottom_right");
-    console.log(week, day, month, year);
     elem.innerHTML = weekDay[week] + ", " + months[month] + " " + day + ", " + year;
-    //week + ", " + month + " " + day + ", " + year;
 }
 
 
